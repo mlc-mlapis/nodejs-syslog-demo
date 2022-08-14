@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 const log = require('ssi-logger');
 const express = require('express');
 const app = express();
