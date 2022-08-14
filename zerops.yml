@@ -1,4 +1,4 @@
-nodejs:
+nodejssyslog:
   build:
     base:
       - nodejs@16
