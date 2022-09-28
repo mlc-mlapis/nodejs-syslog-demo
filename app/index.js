@@ -9,10 +9,11 @@ log.close();
 
 let i = 0;
 
-const emitLog = (i) => {
+const emitLog = (inc) => {
 	log.open({syslog: {facility: 'LOG_LOCAL1'}});
-	log.info('Hello the World:', i);
+	log.info('Hello the World:', +inc);
 	log.close();
+	return inc;
 }
 
 app.get('/', (req, res) => {
@@ -22,5 +23,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
 	console.log(`... listening on port ${port}`);
 	console.log('... application started');
-	setInterval(emitLog, 2000, i);
+	i = setInterval(emitLog, 2000, i);
 });
