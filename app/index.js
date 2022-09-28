@@ -7,6 +7,14 @@ log.open({syslog: {facility: 'LOG_LOCAL1'}});
 log.info('Hello the World');
 log.close();
 
+let i = 0;
+
+const emitLog = (i) => {
+	log.open({syslog: {facility: 'LOG_LOCAL1'}});
+	log.info('Hello the World:', i);
+	log.close();
+}
+
 app.get('/', (req, res) => {
 	res.send(`... Hello!`);
 });
@@ -14,4 +22,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
 	console.log(`... listening on port ${port}`);
 	console.log('... application started');
+	setInterval(emitLog, 2000, i);
 });
