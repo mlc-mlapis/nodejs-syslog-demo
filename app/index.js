@@ -13,7 +13,6 @@ const emitLog = () => {
 	log.open({syslog: {facility: 'LOG_LOCAL1'}});
 	log.info('Hello the World:', +i);
 	log.close();
-	return inc;
 }
 
 app.get('/', (req, res) => {
