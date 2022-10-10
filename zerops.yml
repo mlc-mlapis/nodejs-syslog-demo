@@ -2,6 +2,8 @@ nodejssyslog:
   build:
     base:
       - nodejs@16
+    prepare:
+      - The application build is being prepared ...."
     build:
       - npm i
     deploy:
@@ -11,6 +13,8 @@ nodejssyslog:
     cache:
      - node_modules
   run:
+    prepare:
+      - echo "The application runtime is being prepared ...."
     init:
-      - echo "The application is being initialized ...."
+      - echo "The application runtime is being initialized ...."
     start: npm start
