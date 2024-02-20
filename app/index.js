@@ -11,7 +11,10 @@ let i = 0;
 
 const emitLog = () => {
 	i = i + 1;
-	log.open({syslog: {facility: 'LOG_LOCAL1'}});
+	log.open({
+		console: {enable: false},
+		syslog: {enable: true, facility: 'LOG_LOCAL1'}
+	});
 	log.info('Hello the World:', i);
 	log.close();
 }
