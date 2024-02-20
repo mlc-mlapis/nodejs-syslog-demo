@@ -3,7 +3,10 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-log.open({syslog: {facility: 'LOG_LOCAL1'}});
+log.open({
+	console: {enable: false},
+	syslog: {enable: true, facility: 'LOG_LOCAL1'}
+});
 log.info('Hello the World');
 log.close();
 
@@ -15,7 +18,15 @@ const emitLog = () => {
 		console: {enable: false},
 		syslog: {enable: true, facility: 'LOG_LOCAL1'}
 	});
-	log.info('Hello the World:', i);
+	// log.info('Hello the World:', i);
+	log.EMERG('EMERG: Hello the World:', i);
+	log.ALERT('ALERT: Hello the World:', i);
+	log.CRIT('CRIT: Hello the World:', i);
+	log.ERROR('ERROR: Hello the World:', i);
+	log.WARN('WARN: Hello the World:', i);
+	log.NOTICE('NOTICE: Hello the World:', i);
+	log.INFO('INFO: Hello the World:', i);
+	log.DEBUG('DEBUG: Hello the World:', i);
 	log.close();
 }
 
