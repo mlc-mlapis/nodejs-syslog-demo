@@ -3,7 +3,7 @@ nodejssyslog:
     base:
       - nodejs@16
     prepare:
-      - The application build is being prepared ...."
+      - echo "The application build is being prepared ...."
     build:
       - npm i
     deploy:
