@@ -18,6 +18,7 @@ const emitLog = () => {
 		console: {enable: false},
 		syslog: {enable: true, facility: 'LOG_LOCAL1'}
 	});
+
 	// log.info('Hello the World:', i);
 	log.emerg('EMERG: Hello the World:', i);
 	log.alert('ALERT: Hello the World:', i);
