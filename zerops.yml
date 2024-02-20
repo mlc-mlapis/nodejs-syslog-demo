@@ -18,4 +18,3 @@ nodejssyslog:
     init:
       - echo "The application runtime is being initialized ...."
     start: npm start
-    
