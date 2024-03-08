@@ -1,41 +1,21 @@
-nodejssyslog:
-  build:
-    base:
-      - nodejs@16
-    prepare:
-      - echo "The application build is being prepared ...."
+zerops:
+  - setup: nodejssyslog
     build:
-      - npm i
-    deploy:
-      - ./app/index.js
+      base:
+        - nodejs@16
+      prepareCommands:
+        - echo "The application build is being prepared ...."
+      buildCommands:
+        - npm i
+      deploy:
+        - ./app/index.js
+        - node_modules
+        - package.json
+      cache:
       - node_modules
-      - package.json
-    cache:
-     - node_modules
-  run:
-    prepare:
-      - echo "The application runtime is being prepared ...."
-    init:
-      - echo "The application runtime is being initialized ...."
-    start: npm start
-
-syslog01:
-  build:
-    base:
-      - nodejs@16
-    prepare:
-      - echo "The application build is being prepared ...."
-    build:
-      - npm i
-    deploy:
-      - ./app/index.js
-      - node_modules
-      - package.json
-    cache:
-     - node_modules
-  run:
-    prepare:
-      - echo "The application runtime is being prepared ...."
-    init:
-      - echo "The application runtime is being initialized ...."
-    start: npm start
+    run:
+      prepareCommands:
+        - echo "The application runtime is being prepared ...."
+      initCommands:
+        - echo "The application runtime is being initialized ...."
+      start: npm start
