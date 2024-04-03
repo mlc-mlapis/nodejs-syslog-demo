@@ -22,6 +22,3 @@ zerops:
 
   - setup: nodejssyslogha
     extends: nodejssyslog
-
-  - setup: nodejssyslognonha
-    extends: nodejssyslog
