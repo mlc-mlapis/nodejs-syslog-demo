@@ -22,5 +22,5 @@ zerops:
         - echo "The application runtime is being initialized ...."
       start: npm start
 
-  - setup: nodejssyslogha
+  - setup: nodesyslogha
     extends: nodesyslog
