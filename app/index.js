@@ -1,8 +1,9 @@
-const log = require('ssi-logger');
+// const log = require('ssi-logger');
 const express = require('express');
 const app = express();
 const port = 3000;
 
+/*
 log.open({
 	console: {enable: false},
 	syslog: {enable: true, facility: 'LOG_LOCAL1'}
@@ -30,6 +31,7 @@ const emitLog = () => {
 
 	log.close();
 }
+*/
 
 app.get('/', (req, res) => {
 	res.send(`... Hello!`);
@@ -38,5 +40,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
 	console.log(`... listening on port ${port}`);
 	console.log('... application started');
-	setInterval(emitLog, 2000);
+	// setInterval(emitLog, 2000);
 });
