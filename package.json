@@ -4,11 +4,12 @@
 	"scripts": {
 		"start": "npm run dev",
 		"dev": "node ./app/index.js",
-		"Syslog Logger": "ssi-logger: 6.1.0"
+		"ssi-logger": "6.1.0"
 	},
 	"private": true,
 	"dependencies": {
-		"express": "4.19.2"
+		"express": "4.19.2",
+		"ssi-logger": "6.1.0"
 	},
 	"devDependencies": {
 		"@types/node": "20.14.11"
