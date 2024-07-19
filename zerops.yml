@@ -1,10 +1,10 @@
 zerops:
   - setup: nodesyslog
     build:
-      os: ubuntu
+      # os: ubuntu
       base: nodejs@18
-      prepareCommands:
-        - echo "The application build is being prepared ...."
+      # prepareCommands:
+      #  - echo "The application build is being prepared ...."
       buildCommands:
         - npm i
       deployFiles:
@@ -12,15 +12,15 @@ zerops:
         - node_modules
         - package.json
     run:
-      os: ubuntu
+      # os: ubuntu
       base: nodejs@18
       ports:
         - port: 3000
           httpSupport: true
-      prepareCommands:
-        - echo "The application runtime is being prepared ...."
-      initCommands:
-        - echo "The application runtime is being initialized ...."
+      # prepareCommands:
+      #  - echo "The application runtime is being prepared ...."
+      # initCommands:
+      #  - echo "The application runtime is being initialized ...."
       start: npm start
 
   - setup: nodesyslogha
