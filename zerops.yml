@@ -24,4 +24,4 @@ zerops:
       start: npm start
 
   - setup: nodesyslogha
-    extends: nodesyslog
+    extends: nodejssyslog
