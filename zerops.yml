@@ -1,5 +1,5 @@
 zerops:
-  - setup: nodejssyslog
+  - setup: nodesyslog
     build:
       base: nodejs@18
       prepareCommands:
