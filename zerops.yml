@@ -13,7 +13,7 @@ zerops:
         - package.json
     run:
       # os: ubuntu
-      base: nodejs@18.1
+      base: nodejs@18
       ports:
         - port: 3000
           httpSupport: true
@@ -21,6 +21,8 @@ zerops:
       #  - echo "The application runtime is being prepared ...."
       # initCommands:
       #  - echo "The application runtime is being initialized ...."
+      initCommands:
+        - blabla
       start: npm start
 
   - setup: nodesyslogha
