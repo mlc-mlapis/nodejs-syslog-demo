@@ -4,7 +4,8 @@ zerops:
       # os: ubuntu
       base: nodejs@18
       prepareCommands:
-        - echo "The application build is being prepared ...."
+      #  - echo "The application build is being prepared ...."
+        - halabala
       buildCommands:
         - npm i
       deployFiles:
