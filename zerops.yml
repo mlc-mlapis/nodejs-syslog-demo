@@ -3,8 +3,8 @@ zerops:
     build:
       # os: ubuntu
       base: nodejs@18
-      # prepareCommands:
-      #  - echo "The application build is being prepared ...."
+      prepareCommands:
+        - echo "The application build is being prepared ...."
       buildCommands:
         - npm i
       deployFiles:
