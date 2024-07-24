@@ -2,19 +2,18 @@ zerops:
   - setup: nodesyslog
     build:
       # os: ubuntu
-      base: nodejs@18.1
+      base: nodejs@18
       # prepareCommands:
       #  - echo "The application build is being prepared ...."
       buildCommands:
         - npm i
       deployFiles:
-        - blabla
         - ./app/index.js
         - node_modules
         - package.json
     run:
       # os: ubuntu
-      base: nodejs@18
+      base: nodejs@18.1
       ports:
         - port: 3000
           httpSupport: true
