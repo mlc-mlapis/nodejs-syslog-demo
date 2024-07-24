@@ -21,7 +21,7 @@ zerops:
       #  - echo "The application runtime is being prepared ...."
       # initCommands:
       #  - echo "The application runtime is being initialized ...."
-      initCommands:
+      prepareCommands:
         - blabla
       start: npm start
 
