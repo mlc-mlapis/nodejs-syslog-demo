@@ -8,7 +8,6 @@ zerops:
       buildCommands:
         - npm i
       deployFiles:
-        - blabla
         - ./app/index.js
         - node_modules
         - package.json
