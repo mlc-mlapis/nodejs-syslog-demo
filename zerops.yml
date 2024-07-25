@@ -8,6 +8,7 @@ zerops:
       buildCommands:
         - npm i
       deployFiles:
+        - blabla
         - ./app/index.js
         - node_modules
         - package.json
@@ -17,8 +18,8 @@ zerops:
       ports:
         - port: 3000
           httpSupport: true
-      # prepareCommands:
-      #  - echo "The application runtime is being prepared ...."
+      prepareCommands:
+        - echo "The application runtime is being prepared ...."
       # initCommands:
       #  - echo "The application runtime is being initialized ...."
       start: npm start
