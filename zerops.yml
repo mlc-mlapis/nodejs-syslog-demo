@@ -1,8 +1,8 @@
 zerops:
   - setup: nodesyslog
     build:
-      # os: ubuntu
-      base: nodejs@18
+      os: ubuntu
+      base: nodejs@20
       # prepareCommands:
       #  - echo "The application build is being prepared ...."
       buildCommands:
@@ -12,8 +12,8 @@ zerops:
         - node_modules
         - package.json
     run:
-      # os: ubuntu
-      base: nodejs@18
+      os: ubuntu
+      base: nodejs@20
       ports:
         - port: 3000
           httpSupport: true
@@ -21,10 +21,10 @@ zerops:
       #  - echo "The application runtime is being prepared ...."
       # initCommands:
       #  - echo "The application runtime is being initialized ...."
-      initCommands:
-        - echo "Follow explicit exit ..."
-        - sleep 60
-        - exit 1
+      # initCommands:
+      #  - echo "Follow explicit exit ..."
+      #  - sleep 60
+      #  - exit 1
       start: npm start
 
   - setup: nodesyslogha
