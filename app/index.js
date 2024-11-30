@@ -1,5 +1,16 @@
 // const log = require('ssi-logger');
-const logger = require('pino')();
+const logger = require('pino');
+const loggerTransport = logger.transport({
+	target: 'pino-syslog',
+	level: 'info'
+	/*
+	options: {
+		enablePipelining: false, // optional (default: true)
+		destination: 1 // optional (default: stdout)
+	}
+	*/
+});
+logger(loggerTransport);
 const express = require('express');
 const app = express();
 const port = 3001;
