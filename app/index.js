@@ -1,6 +1,6 @@
 // const log = require('ssi-logger');
-const logger = require('pino');
-const loggerTransport = logger.transport({
+const pino = require('pino');
+const loggerTransport = pino.transport({
 	target: 'pino-syslog',
 	level: 'info'
 	/*
@@ -10,14 +10,14 @@ const loggerTransport = logger.transport({
 	}
 	*/
 });
-logger(loggerTransport);
+const logger = pino(loggerTransport);
 const express = require('express');
 const app = express();
 const port = 3001;
 
-logger.info('Hello world!')
-const child = logger.child({ a: 'property' })
-child.info('Hello child!')
+logger.info('Hello world!');
+const child = logger.child({ a: 'property' });
+child.info('Hello child!');
 
 /*
 log.open({
