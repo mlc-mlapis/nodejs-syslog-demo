@@ -1,7 +1,12 @@
 // const log = require('ssi-logger');
+const logger = require('pino')();
 const express = require('express');
 const app = express();
 const port = 3001;
+
+logger.info('Hello world!')
+const child = logger.child({ a: 'property' })
+child.info('Hello child!')
 
 /*
 log.open({
