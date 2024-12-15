@@ -49,6 +49,12 @@ const emitLog = () => {
 }
 */
 
+let i = 0;
+const emitLog = () => {
+	i = i + 1;
+	console.log(i + '... The application runtime is being initialized .... We need a long log line to see if multi-line wrapping is correctly shown using mono font. We need a long log line to see if multi-line wrapping is correctly shown using mono font. We need a long log line to see if multi-line wrapping is correctly shown using mono font. We need a long log line to see if multi-line wrapping is correctly shown using mono font.');
+}
+
 app.get('/', (req, res) => {
 	res.send(`... Hello!`);
 });
@@ -56,5 +62,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
 	console.log(`... listening on port ${port}`);
 	console.log('... application started');
-	// setInterval(emitLog, 2000);
+	setInterval(emitLog, 2000);
 });
