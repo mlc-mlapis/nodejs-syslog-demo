@@ -21,8 +21,8 @@ zerops:
           httpSupport: true
       # prepareCommands:
       #  - echo "The application runtime is being prepared ...."
-      # initCommands:
-      #  - echo "The application runtime is being initialized ...."
+      initCommands:
+        - echo "The application runtime is being initialized .... We need a long log line to see if multi-line wrapping is correctly shown using mono font. We need a long log line to see if multi-line wrapping is correctly shown using mono font. We need a long log line to see if multi-line wrapping is correctly shown using mono font. We need a long log line to see if multi-line wrapping is correctly shown using mono font."
       # initCommands:
       #  - echo "Follow explicit exit ..."
       #  - sleep 60
