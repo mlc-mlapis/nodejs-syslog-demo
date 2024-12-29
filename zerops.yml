@@ -7,6 +7,10 @@ zerops:
       #  - echo "The application build is being prepared ...."
       buildCommands:
         - npm i
+        - npm i
+        - npm i
+        - npm i
+        - npm i
       deployFiles:
         - ./app/index.js
         - node_modules
