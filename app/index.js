@@ -64,4 +64,3 @@ app.listen(port, () => {
 	console.log('... application started');
 	setInterval(emitLog, 2000);
 });
-
