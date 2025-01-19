@@ -7,9 +7,15 @@ zerops:
       #  - echo "The application build is being prepared ...."
       buildCommands:
         - npm i
-      cache:
-        - node_modules/
-        - package-lock.json
+        - npm i
+        - npm i
+        - npm i
+        - npm i
+        - npm i
+        - npm i
+        - npm i
+        - npm i
+        - npm i
       deployFiles:
         - ./app/index.js
         - node_modules
