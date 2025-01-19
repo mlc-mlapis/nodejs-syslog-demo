@@ -3,6 +3,8 @@ zerops:
     build:
       os: ubuntu
       base: nodejs@20
+      envVariables:
+        DEBUG_BUILD: BEFORE
       # prepareCommands:
       #  - echo "The application build is being prepared ...."
       buildCommands:
