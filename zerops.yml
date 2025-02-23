@@ -13,7 +13,6 @@ zerops:
         - ./app/index.js
         - node_modules
         - package.json
-        - blabla.txt
     run:
       os: ubuntu
       base: nodejs@20
@@ -26,10 +25,10 @@ zerops:
       #  - echo "The application runtime is being prepared ...."
       # initCommands:
       #  - echo "1 - The application runtime is being initialized ...."
-      # initCommands:
-      #  - echo "Follow explicit exit ..."
-      #  - sleep 60
-      #  - exit 1
+      initCommands:
+        - echo "Follow explicit exit ..."
+        - sleep 60
+        - exit 1
       start: npm start
 
   - setup: nodesyslogha
