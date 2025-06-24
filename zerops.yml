@@ -36,3 +36,9 @@ zerops:
 
   - setup: api
     extends: nodesyslog
+
+  - setup: aaa
+    extends: nodesyslog
+
+  - setup: bbb
+    extends: nodesyslog
